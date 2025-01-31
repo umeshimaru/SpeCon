@@ -28,13 +28,13 @@ services:
   frontend:
     build:
       context: ./front/spe-con
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.${NEXT_ENV}
     volumes:
       - ./front/spe-con:/app
       - /app/node_modules
     ports:
       - "8000:3000"
-    command: npm run dev
+ 
 
 volumes:
   postgres_data:
