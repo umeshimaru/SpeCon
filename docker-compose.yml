@@ -32,8 +32,9 @@ services:
     volumes:
       - ./front/spe-con:/app
       - /app/node_modules
+ 
     ports:
-      - "8000:3000"
+      - "8080:8080"
  
 
 volumes:
