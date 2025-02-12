@@ -18,10 +18,12 @@ services:
       - ./back/spe-con:/rails
     ports:
       - "3000:3000"
+      
     depends_on:
       - db
     environment:
       DATABASE_URL: postgres://${USER}:${PASSWORD}@db/${DB}
+  
     tty: true
     stdin_open: true
 
@@ -32,6 +34,7 @@ services:
     volumes:
       - ./front/spe-con:/app
       - /app/node_modules
+      
  
     ports:
       - "8080:8080"
